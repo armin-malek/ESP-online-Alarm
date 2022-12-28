@@ -6,6 +6,6 @@
 
 # See the documentation for all the connection string options: https://pris.ly/d/connection-strings
 
-DATABASE_URL="postgresql://root:password@localhost:33704/esp" # database connection url
+DATABASE_URL="postgresql://root:password@localhost:5432/esp" # database connection url
 TG_TOKEN="" # Telegram Bot token
 ADMIN_ID="" # your Numberic ID in telegram

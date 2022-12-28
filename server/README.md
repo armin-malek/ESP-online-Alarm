@@ -19,7 +19,7 @@ so yeah have a PostgresSQL running locally or you can get one free in Liara.ir o
 put these in a .env file for local setup are enter them in your system environment for production
 
 ```
-DATABASE_URL="postgresql://root:password@localhost:33704/esp" # database connection url
+DATABASE_URL="postgresql://root:password@localhost:5432/esp" # database connection url
 TG_TOKEN="" # Telegram Bot token
 ADMIN_ID="" # your Numberic ID in telegram
 ```
