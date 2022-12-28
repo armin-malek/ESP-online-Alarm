@@ -37,6 +37,8 @@ and just run these commands, it should just work fine.
 ```
 npm i
 
+npx prisma@4 db push
+
 npm run dev
 ```
 
@@ -47,6 +49,8 @@ don't forget the ENV!
 
 ```
 npm i
+
+npx prisma@4 db push
 
 pm2 start server.js
 ```
