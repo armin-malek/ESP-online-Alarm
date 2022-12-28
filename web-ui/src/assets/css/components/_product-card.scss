@@ -1,0 +1,246 @@
+/*=====================
+  2.6 Product Card Css 
+==========================*/
+.product-card {
+  padding: 10px;
+  border: $border1;
+  border-radius: 6px;
+  position: relative;
+  background-color: $white;
+  overflow: hidden;
+  i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: rgba($title-color, 0.65);
+    font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+    [dir="rtl"] & {
+      left: 10px;
+      right: unset;
+    }
+  }
+  .iconly-Heart {
+    transition: all 0.4s;
+    &.icbo {
+      color: $theme-color;
+    }
+  }
+  .img-wrap {
+    margin-bottom: 10px;
+    a {
+      display: block;
+      img {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .content-wrap {
+    margin-bottom: -5px;
+    [dir="rtl"] & {
+      text-align: right;
+    }
+    a {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      font-weight: 600;
+    }
+    span {
+      &:first-of-type {
+        display: block;
+      }
+      &:last-of-type {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        line-height: 22px;
+        font-weight: 600;
+
+        .plus-theme {
+          transition: all 0.4s;
+          right: 0;
+          bottom: 5px;
+        }
+        .plus-minus {
+          position: absolute;
+          left: 0;
+          right: -100px;
+          opacity: 0;
+          visibility: hidden;
+          bottom: 3px;
+          top: -3px;
+          padding: 5px 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          transition: all 0.4s;
+          width: 100%;
+          [dir="rtl"] & {
+            flex-direction: row-reverse;
+            left: -100px;
+            right: 0;
+          }
+          input {
+            padding: 5px 0;
+            flex: 1 1 auto;
+            height: 100%;
+            background-color: $theme-color;
+            color: $white;
+            [class="dark"] & {
+              color: $white-text-dark;
+            }
+          }
+          svg {
+            stroke: $white;
+            width: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+            height: calc(18px + (21 - 18) * ((100vw - 320px) / (1920 - 320)));
+            &:first-of-type {
+              margin: 0 5px 0 0;
+            }
+            &:last-of-type {
+              margin: 0 0 0 5px;
+            }
+          }
+        }
+        &.active {
+          line-height: calc(24px + (29 - 24) * ((100vw - 320px) / (1920 - 320)));
+          display: block;
+
+          .plus-theme {
+            bottom: 0;
+            right: -100px;
+            height: 30px;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            [dir="rtl"] & {
+              left: -100px;
+              right: unset;
+            }
+          }
+
+          .plus-minus {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+            [dir="rtl"] & {
+              left: 0;
+              right: unset;
+            }
+          }
+        }
+
+        [dir="rtl"] & {
+          flex-direction: row-reverse;
+        }
+        span {
+          padding: 4px;
+          background-color: $theme-color;
+          border-radius: 6px;
+          svg {
+            stroke: $white;
+            width: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+            height: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+            [class="dark"] & {
+              stroke: $white-text-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-list {
+  &.media {
+    position: relative;
+    padding: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+    background-color: $white;
+    border-radius: 9px;
+    @media only screen and (max-width: 375px) {
+      align-items: flex-start;
+    }
+    &:not(:first-of-type) {
+      margin-top: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+    }
+    > a {
+      width: 70px;
+      height: auto;
+      padding-right: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
+      border-right: 1px solid $border-color1;
+      [dir="rtl"] & {
+        padding-left: calc(12px + (20 - 12) * ((100vw - 320px) / (1920 - 320)));
+        padding-right: unset;
+        border-left: 2px solid $border-color1;
+        border-right: unset;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .media-body {
+      width: calc(100% - 170px);
+      @media (max-width: 375px) {
+        width: calc(100% - 70px);
+      }
+      a {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+      }
+    }
+    .plus-minus {
+      position: absolute;
+      bottom: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+      right: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+      [dir="rtl"] & {
+        left: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+        right: unset;
+      }
+      @media only screen and (max-width: 375px) {
+        position: relative;
+        bottom: unset;
+        right: unset;
+        margin-top: 8px;
+        display: inline-flex;
+
+        [dir="rtl"] & {
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+    .media-body {
+      > a {
+        margin-top: -5px;
+        font-weight: 600;
+      }
+      > span {
+        &:first-of-type {
+          display: block;
+          font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320))) !important;
+        }
+        &:last-of-type {
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          gap: 10px;
+          .badges-round {
+            font-weight: normal;
+            color: $white;
+            font-size: 10px;
+            [class="dark"] & {
+              color: $white-text-dark;
+            }
+          }
+        }
+      }
+    }
+  }
+}

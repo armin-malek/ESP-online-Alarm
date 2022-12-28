@@ -1,0 +1,115 @@
+/*=====================
+ 4.2 Account Pages Css 
+==========================*/
+.account-page {
+  .account-wrap {
+    .user-panel {
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 17px;
+      background-color: $grey-light;
+      border-radius: 7px;
+
+      .media {
+        > a {
+          img {
+            width: calc(55px + (70 - 55) * ((100vw - 320px) / (1920 - 320)));
+            height: calc(55px + (70 - 55) * ((100vw - 320px) / (1920 - 320)));
+            display: block;
+            border-radius: 100%;
+            object-fit: cover;
+          }
+        }
+        .media-body {
+          text-align: left;
+          [dir="rtl"] & {
+            text-align: right;
+          }
+          > a {
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+            span {
+              font-weight: normal;
+              display: inline-block;
+              margin-top: -1px;
+            }
+          }
+        }
+      }
+    }
+    .navigation {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $white;
+        padding: 0 10px;
+        &:not(:first-of-type) {
+          margin-top: 17px;
+        }
+        .nav-link {
+          display: flex;
+          align-items: center;
+          padding: 0;
+          font-weight: 500;
+          gap: 10px;
+          &:hover,
+          &:focus {
+            color: $title-color;
+          }
+          i {
+            font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+          }
+          img {
+            width: 22px;
+            height: 18px;
+          }
+          span {
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+          }
+        }
+        .arrow {
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          border: $border1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $theme-light-color;
+          [dir="rtl"] & {
+            transform-origin: center;
+            transform: rotate(180deg);
+          }
+          svg {
+            width: 18px;
+            height: 18px;
+            stroke: $theme-color;
+          }
+        }
+      }
+    }
+    .log-out {
+      padding: 8px 30px;
+      font-weight: 600;
+      background-color: $grey-light;
+      border-radius: 9px;
+      margin-top: 25px;
+      display: flex;
+      font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+      align-items: center;
+      gap: 8px;
+      [class="dark"] & {
+        color: $white-text-dark;
+      }
+      i {
+        font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1920 - 320)));
+        [dir="rtl"] & {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

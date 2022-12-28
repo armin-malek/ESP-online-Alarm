@@ -1,0 +1,153 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name:Fastkart APP
+    Template URI: themes.pixelstrap.com/Fastkart-app
+    Description: This is PWA Html Template
+    Author: Pixelstrap
+    Author URL: https://themeforest.net/user/pixelstrap
+
+----------------------------------------------------------------------------------- */
+
+////* Base Files *////
+/* 1.1 Reset CSS */
+/* 1.2 Typography CSS */
+
+////* Components Files *////
+/* 2.1 Accordian CSS */
+/* 2.2 Buttons CSS */
+/* 2.3 Form CSS */
+/* 2.4 Modal CSS */
+/* 2.5 Nav Tab CSS */
+/* 2.6 Product Cart CSS */
+/* 2.7 Ratio Css*/
+/* 2.8 Switch CSS */
+
+////* Layout Files *////
+/* 3.1 Header CSS */
+/* 3.2 Sidebar CSS */
+/* 3.3 Footer CSS */
+
+////* Pages Files *////
+/* 4.1 About Us Page CSS  */
+/* 4.2 Account Page CSS  */
+/* 4.3 Authentic Page CSS */
+/* 4.4 Cart & Wishlist Page CSS */
+/* 4.5 Catagories Wide Page CSS */
+/* 4.6 Catagories Classic Page CSS */
+/* 4.7 Catagories Morden Page CSS */
+/* 4.8 Checkout Page CSS */
+/* 4.9 Error 404 Page CSS */
+/* 4.10 Help Page CSS */
+/* 4.11 Index Page CSS */
+/* 4.12 Notification Page CSS */
+/* 4.13 Offer Page CSS */
+/* 4.14 Onboarding Page CSS */
+/* 4.15 Order Detail Page CSS */
+/* 4.16 Order History Page CSS */
+/* 4.17 Order Tracking Page CSS */
+/* 4.18 Product Page CSS */
+/* 4.19 Search Page CSS */
+/* 4.20 Setting Page CSS */
+/* 4.21 Shop Page CSS */
+/* 4.22 Tearms Page CSS */
+
+////* Theme Files *////
+/* 5.1 Loader CSS */
+
+/// Utils Scss Files ///
+@import "utils/variables";
+
+/// Font color ///
+$title-color: #f0f0f0;
+$content-color: #a9a9a9;
+$content-light: #cacaca;
+$theme-light-color: #2e343b;
+
+/// Main Color ///
+$black: #f0f0f0;
+$white: #22282c;
+$white-light: #2e343b;
+$white-bg-dark: #f0f0f0;
+$grey-light: #2e343b;
+
+/// Border color ///
+$border-color1: #4d4e4d;
+$border-color2: #4d4e4d;
+
+/// Border ///
+$border1: 1px solid $border-color1;
+$border2: 1px solid $border-color2;
+
+///Box Shadow Color ///
+$box-shadow-color1: #2e343b;
+$box-shadow-color2: #2e343b;
+
+/// Main box shadow ///
+$box-shadow1: 0px -2px 8px $box-shadow-color1;
+$box-shadow2: 0px 4px 11px 2px $box-shadow-color2;
+
+/// Skeleton loader ///
+$sk-bg: #2e343b;
+$sk-bg-dark: #292d31;
+$sk-an-bg-grey:linear-gradient(90deg, $sk-bg-dark 8%, #2e343b 18%, $sk-bg-dark 33%);
+$sk-animate: skeletonAnimation 4s linear infinite forwards;
+
+@import "utils/mixin";
+@import "utils/classes";
+
+/// Base Scss Files ///
+@import "base/reset";
+@import "base/typography";
+
+/// Components Scss Files ///
+@import "components/accordion";
+@import "components/buttons";
+@import "components/form";
+@import "components/modal";
+@import "components/nav-tab";
+@import "components/product-card";
+@import "components/ratio";
+@import "components/switch";
+
+/// Layout Scss Files ///
+@import "layout/header";
+@import "layout/sidebar";
+
+/// Pages Scss Files ///
+@import "pages/about-us";
+@import "pages/account-page";
+@import "pages/authentic";
+@import "pages/cart-wishlist-page";
+@import "pages/catagories-wide";
+@import "pages/category-classic";
+@import "pages/category-morden";
+@import "pages/checkout-page";
+@import "pages/error-404";
+@import "pages/help";
+@import "pages/index";
+@import "pages/notification";
+@import "pages/offer-page";
+@import "pages/onboarding";
+@import "pages/order-detail";
+@import "pages/order-history";
+@import "pages/order-tracking";
+@import "pages/product-page";
+@import "pages/search";
+@import "pages/setting-page";
+@import "pages/shop-page";
+@import "pages/terms";
+
+/// Theme Scss ///
+@import "themes/loader";
+
+/// No Need Dark ///
+
+/// Font color ///
+$title-color: #222222;
+$content-color: #777777;
+$content-light: #cacaca;
+
+$black: #000000;
+$white: #ffffff;
+
+@import "layout/footer";

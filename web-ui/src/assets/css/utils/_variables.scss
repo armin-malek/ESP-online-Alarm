@@ -1,0 +1,61 @@
+/// Font color ///
+$title-color: #222222;
+$content-color: #777777;
+$content-light: #cacaca;
+
+/// Main Color ///
+$black: #000000;
+$white: #ffffff;
+$white-light: #fafafa;
+$theme-color: #0baf9a;
+$theme-light-color: #edf8f8;
+$grey-light: #fafafa;
+$rating: #ffbf13;
+$theme-blue: #effefc;
+$theme-yellow: #fff9d8;
+$theme-light-yellow: #fff8ed;
+$theme-orange: #fff2ec;
+$theme-orange-light: #fff6f3;
+$theme-pink: #fff2f2;
+$theme-purple: #fdf7ff;
+$theme-danger: #e93939;
+
+/// social color ///
+$facebook: #385cb4;
+$twitter: #00a0dd;
+$whatsapp: #1abc56;
+$instagram: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+$youtube: #fe4653;
+$linkdin: #0077b5;
+$google: #db3236;
+
+/// Font Familly ///
+$font-1: "Mulish", "sans-serif";
+$font-2: "Quicksand", "sans-serif";
+
+/// Border color ///
+$border-color1: #f1f1f1;
+$border-color2: #ceefeb;
+
+/// Border ///
+$border1: 1px solid $border-color1;
+$border2: 1px solid $border-color2;
+
+///Box Shadow Color ///
+$box-shadow-color1: #fafafa;
+$box-shadow-color2: #f7f7f7;
+
+/// Main box shadow ///
+$box-shadow1: 0px -2px 8px $box-shadow-color1;
+$box-shadow2: 0px 4px 11px 2px $box-shadow-color2;
+
+/// Skeleton loader ///
+$sk-bg: #f3f3f3;
+$sk-bg-dark: #e8e8e8;
+$sk-an-bg-grey:linear-gradient(90deg, $sk-bg-dark 8%, #e4e4e4 18%, $sk-bg-dark 33%);
+$sk-animate: skeletonAnimation 4s linear infinite forwards;
+
+/// Dark ///
+$title-dark-color: #222222;
+$white-text-dark: #f0f0f0;
+$content-dark-color: #777777;

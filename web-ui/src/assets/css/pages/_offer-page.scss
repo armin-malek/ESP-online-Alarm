@@ -1,0 +1,179 @@
+/*=====================
+ 4.13 Offer Page CSS 
+==========================*/
+.offer-page {
+  .search-box {
+    @include search-box-side;
+  }
+  .offer-section {
+    .coupon-ticket {
+      font-family: $font-2;
+      background-color: $grey-light;
+      padding: 20px calc(18px + (25 - 18) * ((100vw - 320px) / (1920 - 320)));
+      position: relative;
+      &:not(:first-of-type) {
+        margin-top: calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+      }
+      .media {
+        position: relative;
+        margin-top: calc(-3px + (-7 + 3) * ((100vw - 320px) / (1920 - 320)));
+        background-color: transparent;
+        gap: calc(6px + (15 - 6) * ((100vw - 320px) / (1920 - 320)));
+        padding: 0;
+        .off {
+          gap: 3px;
+          display: flex;
+          align-items: center;
+
+          @media only screen and (max-width: 375px) {
+            margin-bottom: 19px;
+          }
+
+          > span {
+            &:first-of-type {
+              font-size: calc(26px + (45 - 26) * ((100vw - 320px) / (1920 - 320)));
+              font-weight: 700;
+              color: $theme-color;
+            }
+            &:last-of-type {
+              display: flex;
+              align-items: flex-start;
+              flex-direction: column;
+              span {
+                font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+                font-weight: normal;
+                color: $theme-color;
+                @media only screen and (max-width: 375px) {
+                  font-size: 18px;
+                }
+                &:first-of-type {
+                  margin-bottom: calc(-6px + (-10 + 6) * ((100vw - 320px) / (1920 - 320)));
+                  font-size: calc(17px + (24 - 17) * ((100vw - 320px) / (1920 - 320)));
+                }
+              }
+            }
+          }
+        }
+        .media-body {
+          flex: 1 1 auto;
+          margin-bottom: -4px;
+          @media only screen and (max-width: 375px) {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-bottom: 0;
+            [dir="rtl"] & {
+              right: 0;
+              left: unset;
+            }
+          }
+
+          h2,
+          span {
+            font-weight: 600;
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+          }
+          @media only screen and (max-width: 375px) {
+            span {
+              display: none;
+            }
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .code {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 6px;
+        @media only screen and (max-width: 375px) {
+          margin-left: auto;
+          [dir="rtl"] & {
+            margin-right: auto;
+            margin-left: unset;
+          }
+        }
+        span {
+          font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+        }
+        a {
+          font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+          padding: calc(3px + (5 - 3) * ((100vw - 320px) / (1920 - 320))) calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+          line-height: 22px;
+          background-color: $theme-color;
+          color: $white;
+          border-radius: 100px;
+          [class="dark"] & {
+            color: $white-text-dark;
+          }
+        }
+      }
+      .big-circle {
+        position: absolute;
+        top: 50%;
+        right: 20%;
+        transform: translateY(-50%);
+        [dir="rtl"] & {
+          right: unset;
+          left: 20%;
+        }
+        @media only screen and (max-width: 375px) {
+          right: 26%;
+          [dir="rtl"] & {
+            right: unset;
+            left: 26%;
+          }
+        }
+
+        span {
+          width: 40px;
+          height: 40px;
+          border-radius: 100%;
+          background-color: transparent;
+          display: block;
+          position: relative;
+          &::before,
+          &::after {
+            content: "";
+            left: 50%;
+            transform: translateX(-50%);
+            width: inherit;
+            height: inherit;
+            border-radius: inherit;
+            background-color: $white;
+            position: absolute;
+          }
+          &::before {
+            top: -42px;
+          }
+          &::after {
+            bottom: -47px;
+          }
+        }
+        @media only screen and (max-width: 375px) {
+          span {
+            width: 30px;
+            height: 30px;
+            &::before {
+              top: -47px;
+            }
+            &::after {
+              bottom: -50px;
+            }
+          }
+        }
+      }
+      .circle-5 {
+        top: 32%;
+        &.left {
+          left: -6px;
+        }
+        &.right {
+          right: -6px;
+        }
+      }
+    }
+  }
+}

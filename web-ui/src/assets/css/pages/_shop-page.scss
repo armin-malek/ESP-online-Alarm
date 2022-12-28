@@ -1,0 +1,43 @@
+/*=====================
+  4.21 Shop Page Css 
+==========================*/
+.shop-page {
+  .search-box {
+    @include search-box-side;
+    margin-bottom: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+  }
+  .tab-content {
+    .tab-pane {
+      .media {
+        background-color: $grey-light;
+        .media-body {
+          > a {
+            font-weight: 600;
+          }
+        }
+      }
+      .bg-size {
+        &:before {
+          padding-top: 0;
+        }
+      }
+      .banner {
+        position: relative;
+        margin: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) -15px;
+
+        h2 {
+          padding: 0 44px;
+          position: absolute;
+          font-weight: 600;
+          top: 50%;
+          transform: translateY(-50%);
+          font-family: $font-2;
+          font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
+          [class="dark"] & {
+            color: $title-dark-color;
+          }
+        }
+      }
+    }
+  }
+}

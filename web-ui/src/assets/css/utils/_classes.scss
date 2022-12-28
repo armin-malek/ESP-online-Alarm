@@ -1,0 +1,275 @@
+/// Media Class ///
+.media {
+  display: flex;
+  align-items: center;
+  gap: calc(11px + (15 - 11) * ((100vw - 320px) / (1920 - 320)));
+}
+.main-wrap {
+  padding: 0px 15px;
+}
+//// Section Padding Classes ////
+section,
+.section-p-tb {
+  padding-top: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+}
+.section-p-t {
+  padding-top: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+}
+.section-p-b {
+  padding-bottom: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+}
+
+/// Main marging ///
+.mb-xxl {
+  margin-bottom: calc(75px + (100 - 75) * ((100vw - 320px) / (1920 - 320)));
+}
+.title-mb {
+  line-height: 22px;
+  margin-top: -2px;
+  margin-bottom: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+}
+
+/// BG Color & Border ///
+$theme-bg-color: (
+  theme: $theme-color,
+  theme-light: $theme-light-color,
+  blue: $theme-blue,
+  yellow: $theme-yellow,
+  yellow-light: $theme-light-yellow,
+  orange: $theme-orange,
+  orange-light: $theme-orange-light,
+  pink: $theme-pink,
+  purple: $theme-purple,
+  grey-light: $grey-light,
+  sk-grey: $sk-bg,
+);
+@each $name, $value in $theme-bg-color {
+  .bg-theme-#{$name} {
+    background-color: $value;
+  }
+  .border-#{$name} {
+    border: 1px solid darken($value, 2);
+  }
+}
+
+/// Badges Round ///
+.badges-round {
+  padding: 2px 10px;
+  border-radius: 100px;
+}
+
+/// Badges ///
+.badges {
+  padding: 2px 10px;
+  border-radius: 3px;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.plus-minus {
+  border: 1px solid rgba($theme-color, 0.09);
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  text-align: center;
+  input {
+    background-color: $white;
+    color: $theme-color;
+    border: none;
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+    outline: none;
+    width: 35px;
+    text-align: center;
+  }
+  .sub,
+  .add {
+    width: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+    cursor: pointer;
+  }
+}
+
+/// Circle Shape ///
+.circle-shape-wrap {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  .circle-shape {
+    background-color: $theme-light-color;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    z-index: 10;
+    position: relative;
+    &::before,
+    &::after {
+      position: absolute;
+      background-color: inherit;
+      border-radius: inherit;
+      content: "";
+      width: inherit;
+      height: inherit;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::before {
+      top: -50px;
+    }
+    &::after {
+      bottom: -55px;
+    }
+  }
+  &.left {
+    left: -7px;
+  }
+  &.right {
+    right: -7px;
+  }
+}
+
+/// Circle Shape ///
+.circle-5 {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  .circle-shape {
+    background-color: $white;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    z-index: 10;
+    position: relative;
+    top: -5px;
+
+    &:last-of-type {
+      &::before {
+        display: none;
+      }
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      &::after {
+        bottom: -25px;
+      }
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      background-color: inherit;
+      border-radius: inherit;
+      content: "";
+      width: inherit;
+      height: inherit;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::before {
+      top: -24px;
+    }
+    &::after {
+      bottom: -75px;
+    }
+  }
+}
+
+/// Slick Dotes ///
+.slick-dots {
+  text-align: center;
+  position: relative;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin-top: calc(-22px + (-36 + 22) * ((100vw - 320px) / (1920 - 320)));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    position: relative;
+    display: inline-block;
+    height: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320)));
+    width: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320)));
+    transition: all 0.3s;
+    margin: 0 3px;
+    border-radius: 100%;
+    background-color: $theme-color;
+    border: $border2;
+    padding: 0;
+    cursor: pointer;
+    [class="dark"] & {
+      border-color: $theme-color;
+    }
+    button {
+      display: none;
+    }
+  }
+  .slick-active {
+    background-color: $theme-color !important;
+    height: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320)));
+    width: calc(32px + (40 - 32) * ((100vw - 320px) / (1920 - 320)));
+    border-radius: 20px;
+  }
+}
+
+/// Rating ///
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  svg {
+    &:not(:last-of-type) {
+      stroke: $rating;
+      fill: $rating;
+    }
+    &:last-of-type {
+      stroke: $content-light;
+      fill: $content-light;
+    }
+    width: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+    height: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.dark {
+  .datepicker {
+    background-color: $title-dark-color;
+    border: $content-dark-color;
+    .datepicker--nav {
+      border-bottom: 1px solid $content-dark-color;
+      .datepicker--nav-title {
+        color: $white-text-dark;
+      }
+    }
+    .datepicker--cell {
+      color: $content-dark-color;
+      &.-selected-,
+      &.-focus-,
+      &.-current- {
+        background-color: $title-dark-color;
+        border: 1px solid $content-dark-color;
+        color: $white-text-dark;
+      }
+    }
+    .datepicker--cell-day {
+      &.-other-month- {
+        color: rgba($content-dark-color, 0.5) !important;
+      }
+    }
+    .datepicker--pointer {
+      background-color: $title-dark-color;
+      border-top: 1px solid $content-dark-color;
+      border-right: 1px solid $content-dark-color;
+    }
+  }
+}

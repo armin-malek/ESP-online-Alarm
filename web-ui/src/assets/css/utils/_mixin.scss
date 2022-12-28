@@ -1,0 +1,140 @@
+/*=====================
+   Mixin Css 
+==========================*/
+/// Search Box ///
+@mixin search-box {
+  position: relative;
+  input[type="search" i]::-webkit-search-cancel-button {
+    display: none !important;
+  }
+  i {
+    position: absolute;
+    font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .search {
+    left: 16px;
+    font-size: 21px;
+  }
+  .mic {
+    right: 16px;
+    font-size: 23px;
+  }
+
+  input {
+    font-size: calc(15px + (17 - 15) * ((100vw - 320px) / (1920 - 320)));
+    padding: 10px 47px;
+    border-radius: 4px;
+    color: $title-color;
+    border: $border2;
+    background-color: $grey-light;
+    &::placeholder {
+      color: $content-light;
+    }
+    &:focus {
+      border: $border2;
+      background-color: $grey-light;
+      color: $title-color;
+    }
+  }
+}
+
+@mixin search-box-side {
+  @include search-box();
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  > div {
+    position: relative;
+    flex: 1 1 auto;
+  }
+  .filter {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: $theme-color;
+    font-weight: 600;
+  }
+}
+
+/// Top Content ///
+@mixin top-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
+  h4 {
+    font-weight: 700;
+    margin-top: -6px;
+    margin-bottom: calc(0px + (3 - 0) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+  }
+  p {
+    margin-bottom: 0;
+  }
+  a {
+    font-weight: 600;
+    margin-top: -2px;
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+/// Product Slider ///
+@mixin product-slider {
+  [dir="rtl"] & {
+    direction: ltr;
+  }
+  .slick-list {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 0 !important;
+    margin-left: calc(-7px + (-10 + 7) * ((100vw - 320px) / (1920 - 320)));
+    margin-right: calc(-7px + (-10 + 7) * ((100vw - 320px) / (1920 - 320)));
+    [dir="rtl"] & {
+      margin-left: calc(-7px + (-10 + 7) * ((100vw - 320px) / (1920 - 320)));
+      margin-right: unset;
+    }
+    .slick-slide {
+      padding: 0 calc(6px + (10 - 6) * ((100vw - 320px) / (1920 - 320)));
+    }
+  }
+}
+
+/// Dashed border Buttom ///
+@mixin dashed-border-bottom {
+  background-image: linear-gradient(to right, $sk-bg-dark 70%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 14px 1px;
+  background-repeat: repeat-x;
+}
+
+/// Order Summery ///
+@mixin order-summery {
+  ul {
+    li {
+      padding: 2px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+        border: none;
+        color: $content-color;
+      }
+      &:last-child {
+        padding: 10px 0;
+        font-weight: 600;
+        margin-top: 8px;
+        border-top: 1px solid $border-color1;
+        margin-bottom: -5px;
+        span {
+          color: $title-color;
+        }
+      }
+    }
+  }
+}

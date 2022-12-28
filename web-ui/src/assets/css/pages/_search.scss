@@ -1,0 +1,59 @@
+/*=====================
+ 4.19 Search Page Css 
+==========================*/
+.search-page {
+  .search-box {
+    @include search-box;
+  }
+  .recent-search {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      li {
+        padding: 6px 20px;
+        background-color: $theme-light-color;
+        border-radius: 5px;
+        font-weight: normal;
+        cursor: pointer;
+      }
+    }
+  }
+  .trending {
+    .category {
+      padding: 10px;
+      border-radius: 12px;
+      text-align: center;
+      display: block;
+      img {
+        width: calc(45px + (60 - 45) * ((100vw - 320px) / (1920 - 320)));
+        height: calc(45px + (60 - 45) * ((100vw - 320px) / (1920 - 320)));
+        @media only screen and (max-width: 375px) {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+    .row {
+      > div {
+        @media only screen and (max-width: 375px) {
+          flex: 0 0 auto;
+          width: 33.33%;
+        }
+      }
+    }
+  }
+  .trending-products {
+    .product-wrap {
+      .media {
+        background-color: $grey-light;
+      }
+    }
+  }
+}

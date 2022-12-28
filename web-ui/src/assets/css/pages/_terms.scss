@@ -1,0 +1,32 @@
+/*=====================
+ 4.22 Terms & Conditions Page CSS 
+==========================*/
+.terms-condition {
+  .list-section {
+    list-style: disc;
+    padding: 0 18px;
+  }
+  h1 {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: calc(18px + (23 - 18) * ((100vw - 320px) / (1920 - 320)));
+  }
+  .title-sub {
+    font-size: 16px;
+  }
+  .title-mb {
+    margin-top: -6px;
+    margin-bottom: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+  }
+  .list-section {
+    li {
+      font-size: 14px;
+    }
+  }
+  p {
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 320)));
+  }
+}

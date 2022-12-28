@@ -1,0 +1,186 @@
+/*========================
+ 4.3 Authentic Pages  Css 
+==============================*/
+/// Body Pattern ///
+.bg-pattern-wrap {
+  .bg-size {
+    &:before {
+      padding-top: 20%;
+    }
+  }
+  .bg-patter {
+    background-color: $theme-color;
+  }
+}
+.login-page {
+  padding-top: 25px;
+  background-color: $white;
+  margin-top: -22px;
+  border-radius: 22px 22px 0px 0px;
+  .logo {
+    width: 130px;
+    height: auto;
+    [class="dark"] & {
+      display: none;
+    }
+    &.logo-w {
+      display: none;
+      [class="dark"] & {
+        display: block;
+      }
+    }
+  }
+  > p {
+    line-height: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: 15px;
+  }
+
+  > span {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: calc(24px + (40 - 34) * ((100vw - 320px) / (1920 - 320)));
+    [dir="rtl"] & {
+      justify-content: right;
+    }
+    a {
+      text-decoration: underline;
+      color: $content-color;
+      margin-left: 10px;
+      [dir="rtl"] & {
+        margin-right: 10px;
+        margin-left: unset;
+      }
+      svg {
+        width: 21px;
+        height: 21px;
+      }
+    }
+  }
+  .login-section {
+    .custom-form {
+      text-align: center;
+      h1 {
+        margin-bottom: calc(6px + (10 - 6) * ((100vw - 320px) / (1920 - 320)));
+        text-align: left;
+        [dir="rtl"] & {
+          text-align: right;
+        }
+      }
+      p {
+        text-align: left;
+        [dir="rtl"] & {
+          text-align: right;
+        }
+      }
+
+      > span {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        margin-bottom: calc(24px + (40 - 34) * ((100vw - 320px) / (1920 - 320)));
+        [dir="rtl"] & {
+          justify-content: right;
+        }
+        a {
+          text-decoration: underline;
+          color: $content-color;
+          margin-left: 4px;
+          [dir="rtl"] & {
+            margin-right: 4px;
+            margin-left: unset;
+          }
+          svg {
+            width: 21px;
+            height: 21px;
+          }
+        }
+      }
+
+      .forgot {
+        margin-top: -12px;
+        text-align: right;
+        display: block;
+        [dir="rtl"] & {
+          text-align: left;
+        }
+      }
+      .btn-solid {
+        width: 100%;
+        margin-bottom: 22px;
+        font-weight: bold;
+        font-size: calc(17px + (19 - 17) * ((100vw - 320px) / (1920 - 320)));
+      }
+    }
+    .socila-section {
+      margin-top: 30px;
+      > span {
+        width: 100%;
+        padding: 2px;
+        text-align: center;
+        display: block;
+
+        @include dashed-border-bottom();
+        > span {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          background-color: $white;
+          padding: 8px 10px;
+          left: 50%;
+        }
+      }
+      .social-wrap {
+        margin-top: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+        a {
+          display: block;
+          padding: 14px;
+          border-radius: 5px;
+          background-color: $grey-light;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          &:not(:first-of-type) {
+            margin-top: 15px;
+          }
+          img {
+            width: 20px;
+            height: auto;
+          }
+        }
+      }
+    }
+    .countdown {
+      margin-bottom: calc(34px + (50 - 34) * ((100vw - 320px) / (1920 - 320)));
+      .otp-input {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+
+        input {
+          font-weight: 700;
+          padding: 0;
+          width: 25%;
+          height: 50px;
+          text-align: center;
+          &::placeholder {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .otp-countdown {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: calc(34px + (50 - 34) * ((100vw - 320px) / (1920 - 320)));
+      a {
+        text-decoration: underline;
+        color: $content-color;
+      }
+    }
+  }
+}

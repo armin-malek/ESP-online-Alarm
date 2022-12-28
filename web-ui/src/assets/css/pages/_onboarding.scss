@@ -1,0 +1,81 @@
+/*=====================
+ 4.14 Onboarding Page Css 
+==========================*/
+.onboarding-page {
+  text-align: center;
+  .banner {
+    margin-left: -15px;
+    margin-right: -15px;
+    img {
+      width: 100%;
+    }
+  }
+  .content-wrap {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    .logo {
+      width: calc(130px + (150 - 130) * ((100vw - 320px) / (1920 - 320)));
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+      [class="dark"] & {
+        display: none;
+      }
+    }
+    .logo-w {
+      display: none;
+      [class="dark"] & {
+        display: block;
+      }
+    }
+    h1,
+    h2 {
+      margin-bottom: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+      font-weight: 600;
+      font-family: $font-2;
+      margin-top: -4px;
+      line-height: 25px;
+    }
+    p {
+      line-height: 22px;
+      margin-top: -5px;
+      margin-bottom: 0;
+    }
+  }
+  .social-wrap {
+    a {
+      display: block;
+      padding: 14px;
+      border-radius: 5px;
+      background-color: $grey-light;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      &:not(:first-of-type) {
+        margin-top: 15px;
+      }
+      img {
+        width: 20px;
+        height: auto;
+      }
+    }
+  }
+  .onboarding-slider {
+    [dir="rtl"] & {
+      direction: ltr;
+    }
+    .slick-dots {
+      margin-top: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+    }
+  }
+  .btn-solid {
+    margin-bottom: calc(25px + (35 - 25) * ((100vw - 320px) / (1920 - 320)));
+  }
+  .slick-next,
+  .slick-prev {
+    display: none !important;
+  }
+}

@@ -1,0 +1,149 @@
+/*=====================
+ 4.17 Order Tracking Pages Css 
+==========================*/
+
+.order-tracking-page {
+  padding: 0;
+  .map-section {
+    height: 50vh;
+    width: 100%;
+    canvas {
+      width: 100% !important;
+    }
+    .H_imprint {
+      display: none;
+    }
+  }
+
+  .location-section {
+    border-radius: 20px 20px 0px 0px;
+    background-color: $white;
+    margin-top: -15px;
+    position: relative;
+    z-index: 2;
+    padding: 17px 15px 15px 15px;
+    .time-box {
+      text-align: center;
+      padding-bottom: 15px;
+      span {
+        display: block;
+        margin-top: -3px;
+      }
+      h1 {
+        font-size: calc(19px + (22 - 19) * ((100vw - 320px) / (1920 - 320)));
+        font-weight: 700;
+        color: $theme-color;
+        margin-bottom: -4px;
+      }
+    }
+    .current-box {
+      .media {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        border-top: $border1;
+        border-bottom: $border1;
+        img {
+          width: calc(46px + (55 - 46) * ((100vw - 320px) / (1920 - 320)));
+          height: calc(46px + (55 - 46) * ((100vw - 320px) / (1920 - 320)));
+          border-radius: 100%;
+        }
+      }
+      .action-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: auto;
+        [dir="rtl"] & {
+          margin-left: unset;
+          margin-right: auto;
+        }
+        span,
+        a {
+          width: calc(33px + (40 - 33) * ((100vw - 320px) / (1920 - 320)));
+          height: calc(33px + (40 - 33) * ((100vw - 320px) / (1920 - 320)));
+          border-radius: 4px;
+          border: 1px solid $theme-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          i {
+            font-size: calc(20px + (23 - 20) * ((100vw - 320px) / (1920 - 320)));
+            color: $white;
+            [class="dark"] & {
+              color: $white-text-dark;
+            }
+          }
+        }
+      }
+    }
+    .tracking-box {
+      padding: 25px 0;
+      .media {
+        position: relative;
+        z-index: 2;
+        &:not(:first-of-type) {
+          padding-top: 16px;
+        }
+        &:not(:last-of-type) {
+          padding-bottom: 16px;
+        }
+        &:last-of-type {
+          &::after {
+            display: none;
+          }
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 100%;
+          border-left: 2px dashed $border-color1;
+          position: absolute;
+          left: calc(17px + (20 - 17) * ((100vw - 320px) / (1920 - 320)));
+          top: 100%;
+          transform: translateY(-50%);
+          z-index: -1;
+          [dir="rtl"] & {
+            right: calc(17px + (20 - 17) * ((100vw - 320px) / (1920 - 320)));
+            left: unset;
+          }
+        }
+        > span {
+          width: calc(36px + (40 - 36) * ((100vw - 320px) / (1920 - 320)));
+          height: calc(36px + (40 - 36) * ((100vw - 320px) / (1920 - 320)));
+          border-radius: 4px;
+          border: 1px solid $theme-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          i {
+            font-size: 25px;
+            color: $white;
+            [class="dark"] & {
+              color: $white-text-dark;
+            }
+          }
+        }
+      }
+      .media-body {
+        h3 {
+          @media only screen and (max-width: 375px) {
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        span {
+          display: block;
+          margin-bottom: -5px;
+        }
+      }
+    }
+    .btn-solid {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+}

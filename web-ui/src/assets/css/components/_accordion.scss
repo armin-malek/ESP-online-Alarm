@@ -1,0 +1,55 @@
+/*=====================
+  2.1 Accordion  CSS 
+==========================*/
+.accordion {
+  .accordion-item {
+    border: none;
+    background-color: $white !important;
+    .accordion-header {
+      padding: 10px 0;
+      border-top: $border1;
+      background-color: $white;
+    }
+    .accordion-button {
+      background-color: $white;
+      color: $title-color;
+      line-height: 23px;
+      padding: 0;
+      border: none;
+      font-weight: 600;
+      font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+
+      &:focus {
+        color: $title-color;
+        outline: none;
+        box-shadow: none;
+        border: none;
+      }
+      &::after {
+        background-image: url("../icons/svg/chevron-right.svg");
+        [class="dark"] & {
+          filter: invert(1);
+        }
+        [dir="rtl"] & {
+          transform-origin: center;
+          transform: rotate(180deg);
+        }
+      }
+      &:not(.collapsed) {
+        box-shadow: none;
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .accordion-body {
+      padding: 0 0 10px 0;
+      margin-top: -5px;
+      background-color: $white;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

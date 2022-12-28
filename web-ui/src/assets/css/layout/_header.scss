@@ -1,0 +1,90 @@
+/*=====================
+  3.1 Header Css 
+==========================*/
+
+.header {
+  padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320))) 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: calc(7px + (12 - 7) * ((100vw - 320px) / (1920 - 320)));
+    i {
+      font-size: 24px;
+      color: $title-color;
+    }
+    a {
+      display: contents;
+      font-weight: 600;
+      i {
+        font-weight: 200;
+        font-size: 24px;
+        cursor: pointer;
+        [dir="rtl"] & {
+          transform-origin: center;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .logo {
+      width: calc(100px + (130 - 100) * ((100vw - 320px) / (1920 - 320)));
+      height: auto;
+      [class="dark"] & {
+        display: none;
+      }
+    }
+    .logo-w {
+      display: none;
+      [class="dark"] & {
+        display: block;
+      }
+    }
+    .fk-logo {
+      width: calc(24px + (34 - 24) * ((100vw - 320px) / (1920 - 320)));
+      height: auto;
+      [class="dark"] & {
+        display: none;
+      }
+    }
+    .fk-logo-w {
+      display: none;
+      [class="dark"] & {
+        display: block;
+      }
+    }
+  }
+
+  .avatar-wrap {
+    display: flex;
+    align-items: center;
+    gap: calc(6px + (10 - 6) * ((100vw - 320px) / (1920 - 320)));
+
+    > span {
+      display: flex;
+      align-items: center;
+      gap: calc(4px + (8 - 4) * ((100vw - 320px) / (1920 - 320)));
+      font-weight: 700;
+    }
+
+    i {
+      font-size: 22px;
+    }
+    a {
+      svg {
+        width: 20px;
+      }
+    }
+    .lord-icon {
+      margin-bottom: -3px;
+    }
+    .avatar {
+      width: calc(35px + (45 - 35) * ((100vw - 320px) / (1920 - 320)));
+      height: calc(35px + (45 - 35) * ((100vw - 320px) / (1920 - 320)));
+      border-radius: 100%;
+      object-fit: contain;
+    }
+  }
+}

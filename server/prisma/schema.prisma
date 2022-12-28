@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Device {
+  id           Int      @unique @default(autoincrement())
+  mac          String   @unique @db.VarChar(17)
+  dateRegister DateTime
+  Events       Events[]
+}
+
+model Events {
+  id       Int      @unique @default(autoincrement())
+  Device   Device   @relation(fields: [deviceId], references: [id])
+  deviceId Int
+  date     DateTime
+}
+
+model Settings {
+  id    Int    @unique @default(autoincrement())
+  key   String @unique
+  value String @db.Text
+}

@@ -1,0 +1,64 @@
+/*=====================
+ 4.9 404 Page Css 
+==========================*/
+/// 404 Page Start ///
+.error-404 {
+  .banner-box {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: calc(70px + (90 - 70) * ((100vw - 320px) / (1920 - 320)));
+    text-align: center;
+    position: relative;
+    img {
+      width: 70%;
+      position: relative;
+      @media (max-width: 767px)  {
+        width: 80%;
+      }
+    }
+  }
+  .error {
+    text-align: center;
+
+    h2 {
+      font-weight: 600;
+      position: relative;
+      margin-bottom: calc(25px + (30 - 25) * ((100vw - 320px) / (1920 - 320)));
+      font-family: $font-2;
+      &::before {
+        content: "";
+        width: 60px;
+        bottom: calc(-11px + (-15 + 11) * ((100vw - 320px) / (1920 - 320)));
+        height: 2px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $theme-color;
+      }
+    }
+    p {
+      margin-bottom: calc(19px + (25 - 19) * ((100vw - 320px) / (1920 - 320)));
+    }
+    .btn-solid {
+      padding-top: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));
+      padding-bottom: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320)));
+    }
+  }
+}
+/// 404 Page End ///
+
+/// Empty Cart Start ///
+.empty-cart {
+  @extend .error-404;
+  .banner-box {
+    margin-top: 25px;
+  }
+}
+/// Empty Cart End ///
+
+/// No Order Start ///
+.no-order {
+  @extend .empty-cart;
+}
+/// No Order End ///

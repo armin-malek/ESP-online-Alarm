@@ -1,0 +1,52 @@
+/*=====================
+  2.5 Nav Tab Css 
+==========================*/
+.nav-tab {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 10px 15px;
+  background-color: $grey-light;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  flex-wrap: nowrap;
+  gap: 15px;
+  &:hover {
+    overflow-x: auto;
+  }
+  @media only screen and (max-width: 767px) {
+    overflow-x: auto;
+  }
+  .nav-link {
+    width: max-content;
+    padding: 0;
+    background-color: transparent;
+    color: $title-color;
+    font-weight: 600;
+    font-size: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+    &.active {
+      color: $theme-color !important;
+      background-color: transparent;
+    }
+  }
+}
+
+.nav-tab2 {
+  @extend .nav-tab;
+  padding: 0;
+  gap: 0;
+  .nav-item {
+    .nav-link {
+      border-radius: 0;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      padding: 6px calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+      transition: all 0.4s;
+      font-weight: normal;
+      &.active {
+        border-bottom-color: $theme-color;
+      }
+    }
+  }
+}

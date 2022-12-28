@@ -1,0 +1,58 @@
+body {
+    font-family: Vazirmatn FD, "Mulish", sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+* {
+    letter-spacing: 0;
+}
+
+:root {
+    --bs-font-sans-serif: Vazirmatn FD, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.slick-slider {
+    direction: ltr;
+}
+
+.cart-page .coupon-ticket-wrap .coupon-ticket,
+.catagories-wide
+.catagories-wrap
+.tab-content
+.banner-box
+.content-box
+.heading,
+.catagories-wide .catagories-wrap .tab-content .banner-box .content-box p,
+.order-success-page .banner-section .content-wrap h1,
+.error-404 .error h2,
+.empty-cart .error h2,
+.no-order .error h2,
+.banner-section .banner-box .content-box .heading,
+.offer-page .offer-section .coupon-ticket,
+.onboarding-page .content-wrap h1,
+.onboarding-page .content-wrap h2,
+.shop-page .tab-content .tab-pane .banner h2 {
+    font-family: Vazirmatn FD, "Quicksand", "sans-serif";
+}
+
+.custom-form input, .custom-form textarea, .custom-form select, .custom-form .form-control {
+    padding-left: calc(44px + (47 - 44) * ((100vw - 320px) / (1920 - 320)));
+    padding-right: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.onboarding-page .content-wrap p {
+    direction: rtl;
+}
+
+.custom-form input, .custom-form textarea, .custom-form select, .custom-form .form-control {
+    border: 1px solid #ffe6e8;
+}
+
+.custom-form input:focus, .custom-form textarea:focus, .custom-form select:focus, .custom-form .form-control:focus {
+    border-color: #dc3545;
+    box-shadow: none;
+    background-color: rgba(255, 234, 236, 0.25);
+}

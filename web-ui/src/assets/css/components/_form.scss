@@ -1,0 +1,277 @@
+/*=====================
+  2.3 Forms CSS 
+==========================*/
+
+/// input style ///
+
+.custom-form {
+  input,
+  textarea,
+  select,
+  .form-control {
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+    padding: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320))) 0;
+    padding-right: calc(44px + (47 - 44) * ((100vw - 320px) / (1920 - 320)));
+    padding-left: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+    border-radius: 4px;
+    border: $border2;
+    background-color: $grey-light;
+    color: $title-color;
+    &::placeholder {
+      color: $content-color;
+    }
+    &:focus {
+      border-color: $theme-color;
+      box-shadow: none;
+      background-color: $theme-light-color;
+    }
+  }
+  .input-box {
+    margin-bottom: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+    position: relative;
+    input,
+    textarea {
+      line-height: 28px;
+      padding: calc(8px + (10 - 8) * ((100vw - 320px) / (1920 - 320)));
+      padding-right: calc(44px + (47 - 44) * ((100vw - 320px) / (1920 - 320)));
+      padding-left: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+      [dir="rtl"] & {
+        padding-left: calc(44px + (47 - 44) * ((100vw - 320px) / (1920 - 320)));
+        padding-right: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+      }
+    }
+    .showHidePassword {
+      cursor: pointer;
+    }
+    input[type="date" i]::-webkit-calendar-picker-indicator {
+      position: absolute;
+      left: 9px;
+      z-index: 3;
+      margin-left: 0;
+      opacity: 0;
+    }
+    > svg {
+      width: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+      height: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
+      stroke-width: 1.5;
+    }
+    > svg,
+    i {
+      font-size: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)));
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      [dir="rtl"] & {
+        right: unset;
+        left: 16px;
+      }
+    }
+    i {
+      right: 15px;
+      line-height: 22px;
+      [dir="rtl"] & {
+        right: unset;
+        left: 15px;
+      }
+    }
+    &.text-box {
+      > svg,
+      img {
+        top: calc(23px + (26 - 23) * ((100vw - 320px) / (1920 - 320)));
+      }
+    }
+    span {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 4px;
+      background-color: $theme-blue;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        transition: all 0.4s;
+      }
+      [dir="rtl"] & {
+        right: unset;
+        left: 14px;
+      }
+    }
+    select:focus ~ span {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+    .type-password {
+      background-color: $theme-light-color;
+      padding: 10px;
+      border: 1px solid $theme-color;
+      border-radius: 4px;
+      label {
+        font-weight: 600;
+      }
+      input {
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+  .type-password {
+    background-color: $theme-light-color;
+    padding: 10px;
+    border: 1px solid $theme-color;
+    border-radius: 4px;
+    label {
+      font-weight: 600;
+    }
+    .input-box {
+      margin-left: -10px;
+      margin-right: -10px;
+      input {
+        border: none;
+        background-color: transparent;
+        &::placeholder {
+          color: $content-color;
+        }
+      }
+    }
+  }
+}
+
+.input-box {
+  select {
+    padding: calc(9px + (12 - 9) * ((100vw - 320px) / (1920 - 320))) 15px;
+    background-color: $grey-light;
+    border: $border2;
+    color: $title-color;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+    &:focus {
+      border: $border2 !important;
+      background-color: $grey-light !important;
+    }
+  }
+  .select-box {
+    position: relative;
+    span {
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 4px;
+      svg {
+        width: 24px;
+        height: 24px;
+        transition: all 0.4s;
+        [dir="rtl"] & {
+          transform-origin: center;
+          transform: rotate(180deg);
+        }
+      }
+      [dir="rtl"] & {
+        right: unset;
+        left: 9px;
+      }
+    }
+  }
+  select:focus ~ span {
+    svg {
+      transform: rotate(90deg);
+      [dir="rtl"] & {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  input[type="radio"] {
+    position: relative;
+    margin: 2px 1rem 0 3px;
+    [dir="rtl"] & {
+      margin: 2px 1px 0 1rem;
+    }
+    cursor: pointer;
+    &:before {
+      transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+      transform: scale(0, 0) translate(-50%, -50%);
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      width: 0.55rem;
+      height: 0.55rem;
+      background: $theme-color;
+      border-radius: 50%;
+      [dir="rtl"] & {
+        left: unset;
+        right: -2px;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.05rem;
+      height: 1.05rem;
+      background: $white;
+      border: 1px solid $theme-color;
+      border-radius: 50%;
+      [dir="rtl"] & {
+        left: unset;
+        right: -10px;
+      }
+    }
+    &:checked {
+      &:before {
+        transform: scale(1, 1) translate(-50%, -50%);
+      }
+      &:after {
+        border: 1px solid $theme-color;
+      }
+    }
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+  background-color: $theme-light-color !important;
+  color: $title-color !important;
+  -webkit-box-shadow: 0 0 0 1000px $theme-light-color inset !important;
+  -webkit-text-fill-color: $title-color !important;
+}
+
+/// Date Picker ///
+.datepicker {
+  left: 25px !important;
+  @media only screen and (max-width: 375px) {
+    left: 12px !important;
+  }
+  &.--day-name {
+    color: $theme-orange;
+  }
+  .datepicker--cell {
+    &.-selected-,
+    &.-focus-,
+    &.-current- {
+      background-color: $theme-blue;
+      color: $title-color;
+    }
+  }
+  [dir="rtl"] & {
+    left: calc(199px + (299 - 199) * ((100vw - 320px) / (1920 - 320))) !important;
+    @media only screen and (max-width: 575px) {
+      left: calc(12px + (1794 - 12) * ((100vw - 320px) / (1920 - 320))) !important;
+    }
+    @media only screen and (max-width: 375px) {
+      left: 12px !important;
+    }
+  }
+}
+.datepicker--nav-action {
+  path {
+    stroke: $title-color;
+  }
+}

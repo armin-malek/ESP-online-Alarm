@@ -1,0 +1,152 @@
+/*=====================
+ 4.5 Catagories wide Page CSS 
+==========================*/
+.catagories-wide {
+  .search-box {
+    @include search-box;
+  }
+  .catagories-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+    .nav {
+      position: sticky;
+      top: 15px;
+      flex: 0 0 32%;
+      border-radius: 0 5px 5px 0;
+      overflow: hidden;
+      background-color: $theme-light-color;
+      margin-left: -15px;
+      [dir="rtl"] & {
+        margin-right: -15px;
+        margin-left: unset;
+      }
+      .nav-link {
+        width: 100%;
+        padding: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320))) 15px;
+        &:not(:last-of-type) {
+          border-bottom: 1px solid rgba($border-color2, 0.5);
+        }
+        .content {
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: calc(4px + (8 - 4) * ((100vw - 320px) / (1920 - 320)));
+
+          img {
+            width: calc(50px + (70 - 50) * ((100vw - 320px) / (1920 - 320)));
+            height: calc(50px + (70 - 50) * ((100vw - 320px) / (1920 - 320)));
+            object-fit: contain;
+          }
+          span {
+            font-weight: 600;
+            line-height: 20px;
+            margin-top: 3px;
+            letter-spacing: 0.02em;
+
+            @media only screen and (max-width: 360px) {
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+          }
+        }
+        &.active {
+          background-color: $white-light;
+          [class="dark"] & {
+            background-color: rgba($white, 0.45);
+          }
+        }
+      }
+    }
+    .tab-content {
+      flex: 1 1 auto;
+      .banner-box {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px;
+        [dir="rtl"] & {
+          transform: scaleX(-1);
+        }
+        .content-box {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: calc(15px + (18 - 15) * ((100vw - 320px) / (1920 - 320)));
+          left: 0;
+          right: 0;
+          [dir="rtl"] & {
+            transform: translateY(-50%) scaleX(-1);
+          }
+          .heading {
+            font-family: $font-2;
+            font-weight: bold;
+            margin-top: -5px;
+            margin-bottom: -3px;
+            font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+            line-height: calc(22px + (33 - 22) * ((100vw - 320px) / (1920 - 320)));
+            [class="dark"] & {
+              color: $title-dark-color;
+            }
+          }
+          p {
+            font-family: $font-2;
+            margin-bottom: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+            margin-top: calc(5px + (0 - 5) * ((100vw - 320px) / (1920 - 320)));
+            font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+            display: block;
+            [class="dark"] & {
+              color: $content-dark-color;
+            }
+          }
+          .btn-solid {
+            font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+            padding: calc(6px + (9 - 6) * ((100vw - 320px) / (1920 - 320))) calc(12px + (24 - 12) * ((100vw - 320px) / (1920 - 320)));
+            line-height: calc(14px + (22 - 14) * ((100vw - 320px) / (1920 - 320)));
+            [class="dark"] & {
+              border-color: $theme-color;
+            }
+          }
+        }
+      }
+      .staples-box {
+        text-align: center;
+        > div {
+          background-color: $grey-light;
+          border-radius: 6px;
+          padding: calc(5px + (20 - 5) * ((100vw - 320px) / (1920 - 320)));
+          img {
+            width: 100%;
+            @media only screen and (max-width: 375px) {
+              width: 80%;
+            }
+          }
+        }
+        h4 {
+          margin-top: 4px;
+          font-size: calc(14px + (15 - 14) * ((100vw - 320px) / (1920 - 320)));
+          color: $content-color;
+          font-weight: 600;
+          transition: all 0.5s;
+        }
+        &:hover {
+          h4 {
+            color: $theme-color;
+          }
+        }
+      }
+      .row {
+        > div {
+          @media only screen and (max-width: 375px) {
+            flex: 0 0 auto;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
